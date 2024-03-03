@@ -1,5 +1,41 @@
 import "./Profile.css";
 import PropTypes from 'prop-types';
+
+
+const skills = [
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "#2662EA"
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "#EFD81D"
+  },
+  {
+    skill: "Web Design",
+    level: "advanced",
+    color: "#C3DCAF"
+  },
+  {
+    skill: "Git and GitHub",
+    level: "intermediate",
+    color: "#E84F33"
+  },
+  {
+    skill: "React",
+    level: "advanced",
+    color: "#60DAFB"
+  },
+  {
+    skill: "Svelte",
+    level: "beginner",
+    color: "#FF3B00"
+  }
+];
+
+
 const ProfileCard = () => {
   return (
     <div className="profile-card">
@@ -36,12 +72,19 @@ const Info = () =>(
 const List = () =>{
     return(
         <ul className="skills">
-          <Skill color="Blue" skill="HTML CSS" />
+          {/* <Skill color="Blue" skill="HTML CSS" />
           <Skill color="Yellow" skill="JavaScript" />
           <Skill color="yellowgreen" skill="Web Design" />
           <Skill color="Red" skill="Git and Github" />
           <Skill color="skyblue" skill="React" />
-          <Skill color="Orange" skill="Svetle" />
+          <Skill color="Orange" skill="Svetle" /> */}
+
+
+          {skills.map((skill)=>{
+              return (
+                <Skill key={skill.skill} skill={skill.skill} color={skill.color} />
+              )
+          })}
         </ul>
     )
 }
