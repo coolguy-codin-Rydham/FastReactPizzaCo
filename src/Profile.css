@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-card{
+    width: 24rem;
+    /* height: 31rem; */
+    margin: 40px;
+    border: 4px solid black;
+}
+
+.photo>img{
+    width: 23.5rem;
+    height: 16rem;
+    object-fit: fill;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 10px;
+}
+.skills>*{
+    list-style: none;
+    margin: 2px;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.info{
+    padding: 20px;
+}
